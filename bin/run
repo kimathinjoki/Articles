@@ -1,6 +1,14 @@
 #!/usr/bin/env ruby 
+require "pry"
+require_relative '../config/environment'
 
-require_relative '..config/environment.rb'
+def reset_database
+  article.create_table
+  article.create(name: "It's me, Java", album: "Programmers")
+  article.create(title: "Why Ruby?", album: "Waaat")
+end
+
+reset_database
 
 
 binding.pry
