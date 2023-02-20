@@ -4,8 +4,9 @@ source "https://rubygems.org"
 
 # gem "rails"
 
-group :development do
-    
-    gem 'pry'
+gem "sqlite3", "~> 1.4"
 
-end
+  
+gem 'pry'
+
+

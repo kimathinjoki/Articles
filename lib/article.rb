@@ -1,7 +1,7 @@
 require_relative "../config/environment"
 
 
-class Article < environment
+class Article
 
     attr_accessor :id
     attr_reader :title, :magazine, :author
@@ -26,10 +26,14 @@ class Article < environment
 
         sql= <<-SQL
         CREATE TABLE IF NOT EXISTS articles
-        (id INTEGER PRIMARY KEY, title TEXT, magazine_id INTEGER, author_id INTEGER)
+        (id INTEGER PRIMARY KEY, title TEXT, magazine INTEGER, author INTEGER)
         SQL
 
         DB[:conn].execute(sql)
+    end
+
+    def.create
+        
     end
 
     def author

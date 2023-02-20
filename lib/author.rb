@@ -26,7 +26,9 @@ class Author
         WHERE articles.author = ?
         SQL
 
-        DB[:conn].execute(sql,self.name)
+        DB[:conn].execute(sql,self.name).map |row|
+            row
+        end
     end
 
     def add_article(magazine, title)
